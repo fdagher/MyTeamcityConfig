@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="0af19ce9-7c51-40af-9372-ccef0c4b6c32" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="build/jar/MySuperDuperProject.jar" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_4" name="Build" type="Ant">
+        <parameters>
+          <param name="build-file-path" value="build.xml" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_5" name="Test" type="Ant">
+        <parameters>
+          <param name="build-file-path" value="build.xml" />
+          <param name="runnerArgs" value="junit" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="MySuperDuperProject_HttpsGithubComFdagherMySuperDuperProjectGitRefsHeadsDevelop" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers>
+      <build-trigger id="vcsTrigger" type="vcsTrigger">
+        <parameters>
+          <param name="groupCheckinsByCommitter" value="true" />
+          <param name="perCheckinTriggering" value="true" />
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <cleanup />
+  </settings>
+</build-type>
+
