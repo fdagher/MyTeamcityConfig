@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="0af19ce9-7c51-40af-9372-ccef0c4b6c32" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
   <name>Build</name>
-  <description>Build for my Super Duper Java Project.</description>
+  <description>Build for my Super Duper Java Project</description>
   <settings>
     <options>
       <option name="artifactRules" value="build/jar/MySuperDuperProject.jar" />
